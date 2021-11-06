@@ -21,7 +21,7 @@ If you did want to load a component based on the prefix path you can do this:
     Ex. /news/main would have to come before /news/:id.
         This is no longer the case with Version 6.
 
-- No more `Redirect`, instead import and use `Navigate`
+- No more `Redirect`, instead import and use `Navigate`</br>
     Ex.</br>
            `<Route path='/' element={<Navigate to='/welcome' />} />`
 
