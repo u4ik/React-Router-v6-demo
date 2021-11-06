@@ -20,7 +20,8 @@ If you did want to keep a component rendered based on the starting path you can 
     `<News/>` will still be rendered, however with version 6 React will internally try to decide the best component to render
 - Order of routes no longer matter.
     Before you would have to have dynamic routes underneath static routes.</br>
-    Ex.</br> /news/main would have to come before /news/:id.
+   - Ex.</br>
+     - /news/main would have to come before /news/:id.
         This is no longer the case with Version 6.
 
 - No more `Redirect`, instead import and use `Navigate`</br>
