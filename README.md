@@ -48,12 +48,12 @@ If you did want to keep a component rendered based on the starting path you can 
     - Nested Routes have relative paths.
 
 - `useHistory` no longer exists, instead use `useNavigate`
-    - You can also provide options to the navigate object that's returned when calling useNavigate.</br>
+    - You can also provide options to the navigate object that's returned when calling `useNavigate`.</br>
     - Ex.</br>
         `const navigate = useNavigate();`</br>
         `navigate('/welcome', { replace: true })`
-        
+
     - Which then will redirect, instead of pushing the new route to the navigation stack.
-- You can also provide numbers such as -1 or 1, to navigate to the previous and next page. Ore even -2 to go 2 steps back to the previous page.
+- You can also provide numbers such as -1 or 1, to navigate to the previous and next page. Or even -2 to go 2 steps back to the previous page.
     
-- Prompt is not yet available in version 6# react-router-dom-6-demo
+- `Prompt` is not yet available in version 6# react-router-dom-6-demo
