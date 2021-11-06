@@ -44,7 +44,7 @@ If you did want to load a component based on the prefix path you can do this:
 - `UseHistory` no longer exists, instead use `useNavigate`
     - You can also provide options to the navigate object that's returned when calling useNavigate.</br>
     Ex. </br>
-        `const navigate = useNavigate();`
+        `const navigate = useNavigate();`</br>
         `navigate('/welcome', { replace: true })`
     - Which then will redirect, instead of pushing the new route to the navigation stack.
 - You can also provide numbers such as -1 or 1, to navigate to the previous and next page. Ore even -2 to go 2 steps back to the previous page.
