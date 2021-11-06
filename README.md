@@ -56,4 +56,4 @@ If you did want to keep a component rendered based on the starting path you can 
     - Which then will redirect, instead of pushing the new route to the navigation stack.
 - You can also provide numbers such as -1 or 1, to navigate to the previous and next page. Or even -2 to go 2 steps back to the previous page.
     
-- `Prompt` is not yet available in version 6.
+- `Prompt` is not yet available in version 6. (11-4-2021)
