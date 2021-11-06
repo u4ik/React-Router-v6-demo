@@ -40,7 +40,7 @@ If you did want to keep a component rendered based on the starting path you can 
     Full Path To Render Child: .../welcome/new-user. </br>
     Both components are rendered. </br>
 
-- Nested Link/NavLink components will also use relative pathing. </br>
+- Nested `Link`/`NavLink` components will also use relative pathing. </br>
     <`NavLink` to="new-user">
                 Enter
     </`NavLink`>
