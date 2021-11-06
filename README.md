@@ -52,6 +52,7 @@ If you did want to keep a component rendered based on the starting path you can 
     - Ex.</br>
         `const navigate = useNavigate();`</br>
         `navigate('/welcome', { replace: true })`
+        
     - Which then will redirect, instead of pushing the new route to the navigation stack.
 - You can also provide numbers such as -1 or 1, to navigate to the previous and next page. Ore even -2 to go 2 steps back to the previous page.
     
