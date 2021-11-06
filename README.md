@@ -33,9 +33,9 @@ If you did want to keep a component rendered based on the starting path you can 
 - If a parent is loaded with /welcome/*, this nested route will assume that /welcome is already present, which allows us to omit it from this nested path.</br>
     
     - Parent </br>
-    `<Route path="/welcome/*" element={<Welcome/>} />`</br>
-         - Nested </br>
-	`<Route path="new-user" element={<WelcomeUser/>} />`</br>
+        `<Route path="/welcome/*" element={<Welcome/>} />`</br>
+    - Nested </br>
+	    `<Route path="new-user" element={<WelcomeUser/>} />`</br>
         
     Full Path To Render Child: .../welcome/new-user. </br>
     Both components are rendered. </br>
