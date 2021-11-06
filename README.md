@@ -49,7 +49,7 @@ If you did want to keep a component rendered based on the starting path you can 
 
 - `useHistory` no longer exists, instead use `useNavigate`
     - You can also provide options to the navigate object that's returned when calling useNavigate.</br>
-    Ex. </br>
+    - Ex.</br>
         `const navigate = useNavigate();`</br>
         `navigate('/welcome', { replace: true })`
     - Which then will redirect, instead of pushing the new route to the navigation stack.
