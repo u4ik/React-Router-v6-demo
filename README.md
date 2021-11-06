@@ -9,16 +9,17 @@
 	`<Route path='/about' element={<About />} />` </br>
 
 - `exact` is no longer needed as a prop to `Route`, as it is enabled by default.
-If you did want to load a component based on the prefix path you can do this:
+If you did want to keep a component rendered based on the starting path you can do this:
 
 	`<Route path='/news/*' element={<News />} />`
 
-- This will render the news component as long as the url pathname begins with /news. Any paths that follow will still keep this news component rendered. </br>
-    Ex. /news/:id -> `<NewsItem/>`</br>
-    (`<News/>` will still be rendered, however with version 6 React will internally try to decide the best component to fit)
+- This will render the news component as long as the url pathname begins with /news. Any paths that follow will still keep the `<News/>` component rendered.</br>
+    Ex.</br>
+     /news/:id -> `<NewsItem/>`</br>
+    (`<News/>` will still be rendered, however with version 6 React will internally try to decide the best component to render)
 - Order of routes no longer matter.
     Before you would have to have dynamic routes underneath static routes.</br>
-    Ex. /news/main would have to come before /news/:id.
+    Ex.</br> /news/main would have to come before /news/:id.
         This is no longer the case with Version 6.
 
 - No more `Redirect`, instead import and use `Navigate`</br>
@@ -33,14 +34,13 @@ If you did want to load a component based on the prefix path you can do this:
          - Nested </br>
 	`<Route path="new-user" element={<WelcomeUser/>} />`</br>
         
-    Full Path: .../welcome/new-user. </br>
+    Full Path To Render Child: .../welcome/new-user. </br>
     Both components are rendered. </br>
 
 - Nested Link/NavLink components will also use relative pathing. </br>
     <`NavLink` to="new-user">
                 Enter
     </`NavLink`>
-
     - Nested Routes have relative paths.
 
 - `useHistory` no longer exists, instead use `useNavigate`
