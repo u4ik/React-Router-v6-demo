@@ -14,7 +14,7 @@ If you did want to load a component based on the prefix path you can do this:
 	`<Route path='/news/*' element={<News />} />`
 
 - This will render the news component as long as the url pathname begins with /news. Any paths that follow will still keep this news component rendered. </br>
-    Ex. /news/:id -> `<NewsItem/>`
+    Ex. /news/:id -> `<NewsItem/>`</br>
     (`<News/>` will still be rendered, however with version 6 React will internally try to decide the best component to fit)
 - Order of routes no longer matter.
     Before you would have to have dynamic routes underneath static routes.</br>
