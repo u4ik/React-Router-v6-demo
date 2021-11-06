@@ -1,4 +1,5 @@
 # React Router v.6 Changes
+Docs: https://reactrouter.com/docs/en/v6/upgrading/v5
 
  - No more `Switch` components, instead import and replace it with `Routes`
 
