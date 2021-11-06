@@ -2,7 +2,7 @@
 
  - No more `Switch` components, instead import and replace it with `Routes`
 
-- Route Usage:
+- `Route` Usage:
 
 	`<Route path='/news' element={<News />} />` </br>
 	`<Route path='/welcome' element={<Welcome />} />` </br>
