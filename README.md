@@ -22,6 +22,8 @@ If you did want to load a component based on the prefix path you can do this:
         This is no longer the case with Version 6.
 
 - No more `Redirect`, instead import and use `Navigate`
+    Ex.</br>
+           `<Route path='/' element={<Navigate to='/welcome' />} />`
 
 - Every `Route` MUST be wrapped in `Routes`. No matter where it is within your app even if it's a single `Route`.
 
