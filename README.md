@@ -41,7 +41,7 @@ If you did want to load a component based on the prefix path you can do this:
 
     - Nested Routes have relative paths.
 
-- `UseHistory` no longer exists, instead use `useNavigate`
+- `useHistory` no longer exists, instead use `useNavigate`
     - You can also provide options to the navigate object that's returned when calling useNavigate.</br>
     Ex. </br>
         `const navigate = useNavigate();`</br>
