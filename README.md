@@ -6,9 +6,9 @@
 
 - Route Usage:
 
-	<Route path='/news' element={<News />} />
-	<Route path='/welcome' element={<Welcome />} />
-	<Route path='/about' element={<About />} />
+	<Route path='/news' element={<News />} /> </br>
+	<Route path='/welcome' element={<Welcome />} /> </br>
+	<Route path='/about' element={<About />} /> </br>
 
 - 'exact' is no longer needed as a prop to Route, as it is enabled by default.
 If you did want to load a component based on the prefix path you can do this:
