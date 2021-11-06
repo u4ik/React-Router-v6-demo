@@ -1,4 +1,4 @@
-# React Router Dom v.6 Changes
+# React Router v.6 Changes
 
  - No more `Switch` components, instead import and replace it with `Routes`
 
