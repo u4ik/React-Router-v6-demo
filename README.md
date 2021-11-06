@@ -1,6 +1,8 @@
 
-Changes
-- No more Switch components, instead import and replace it with Routes
+
+# Changes
+
+ - No more Switch components, instead import and replace it with Routes
 
 - Route Usage:
 
@@ -48,4 +50,3 @@ If you did want to load a component based on the prefix path you can do this:
 - You can also provide numbers such as -1 or 1, to navigate to the previous and next page. Ore even -2 to go 2 steps back to the previous page.
     
 - Prompt is not yet available in version 6# react-router-dom-6-demo
-```
