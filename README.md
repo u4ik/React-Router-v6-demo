@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+Changes...
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    - No more Switch components, instead import and replace it with Routes
 
-## Available Scripts
+    - Route Usage:
+        <Route path='/news' element={<News />} />
+        <Route path='/welcome' element={<Welcome />} />
+        <Route path='/about' element={<About />} />
 
-In the project directory, you can run:
+    - 'exact' is no longer needed as a prop to Route, as it is enabled by default.
+    If you did want to load a component based on the prefix path you can do this:
+        <Route path='/news/*' element={<News />} />
+    This will render the news component as long as the url pathname begins with /news. Any paths that follow will still keep this news component rendered. 
+        Ex. /news/:id -> <NewsItem/>
+        (<News/> will still be rendered, however with version 6 React will internally try to decide the best component to fit)
 
-### `npm start`
+    - Order of routes no longer matter.
+        Before you would have to have dynamic routes underneath static routes.
+        Ex. /news/main would have to come before /news/:id.
+            This is no longer the case with Version 6.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    - No more Redirect, instead import and use Navigate
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    - Every Route MUST be wrapped in Routes. No matter where it is within your app even if it's a single Route.
 
-### `npm test`
+    - If a parent is loaded with /welcome/*, this nested route will assume that /welcome is already present, which allows us to omit it from this nested path.
+            <!-- Parent -->
+            <Route path="/welcome/*" element={<Welcome/>} />
+            <!-- Nested -->
+            <Route path="new-user" element={<WelcomeUser/>} />
+            Full Path: .../welcome/new-user.
+            Both components are rendered.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    - Nested Link/NavLink components will also use relative pathing.
+        <NavLink to="new-user">
+                    Enter
+        </NavLink>
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+        -Nested Routes have relative paths.
+    
+    - UseHistory no longer exists, instead use useNavigate
+        - You can also provide options to the navigate object that's returned when calling useNavigate.
+        Ex.     const navigate = useNavigate();
+                navigate('/welcome', { replace: true })
+                - Which then will redirect, instead of pushing the new route to the navigation stack.
+        - You can also provide numbers such as -1 or 1, to navigate to the previous and next page. Ore even -2 to go 2 steps back to the previous page.
+        
+    - Prompt is not yet available in version 6# react-router-dom-6-demo
