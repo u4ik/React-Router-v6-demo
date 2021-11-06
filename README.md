@@ -14,8 +14,8 @@ If you did want to keep a component rendered based on the starting path you can 
 	`<Route path='/news/*' element={<News />} />`
 
 - This will render the news component as long as the url pathname begins with /news. Any paths that follow will still keep the `<News/>` component rendered.</br>
-    Ex.</br>
-     /news/:id -> `<NewsItem/>`</br>
+   - Ex.</br>
+    - /news/:id -> `<NewsItem/>`</br>
     (`<News/>` will still be rendered, however with version 6 React will internally try to decide the best component to render)
 - Order of routes no longer matter.
     Before you would have to have dynamic routes underneath static routes.</br>
