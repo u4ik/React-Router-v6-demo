@@ -5,7 +5,7 @@ const Nav = () => {
     const navigate = useNavigate();
 
     const goToRandomRoute = () => {
-        const routes = ['/welcome', '/about', '/news']
+        const routes = ['/welcome','/welcome/new-user', '/about', '/news']
         navigate(routes[Math.floor(Math.random()* routes.length)])
     }
 

@@ -6,9 +6,10 @@ import { Nav, News, About, Welcome } from './components'
 function App() {
   return (
     <div className="App">
+      <div style={{display:"flex", justifyContent:'center',paddingTop:'2em'}}>
+      <Nav />
+      </div>
       <header className="App-header">
-
-        <Nav />
 
         <Routes>
 
